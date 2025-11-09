@@ -17,9 +17,9 @@ DATASET_PATH = 'Solar_Panel_Dataset'
 EPOCHS = 50 # Max epochs
 
 DRIVE_SAVE_DIR = '/content/drive/MyDrive/SolarPanel_Project_Final/'
-MODEL_SAVE_PATH = os.path.join(DRIVE_SAVE_DIR, 'solarguard_champion_model.h5')
-PLOT_SAVE_PATH = os.path.join(DRIVE_SAVE_DIR, 'champion_training_plots.png')
-MATRIX_SAVE_PATH = os.path.join(DRIVE_SAVE_DIR, 'champion_confusion_matrix.png')
+MODEL_SAVE_PATH = os.path.join(DRIVE_SAVE_DIR, 'solarguard_model.h5')
+PLOT_SAVE_PATH = os.path.join(DRIVE_SAVE_DIR, 'training_plots.png')
+MATRIX_SAVE_PATH = os.path.join(DRIVE_SAVE_DIR, 'confusion_matrix.png')
 
 # Create the save directory if it doesn't exist
 os.makedirs(DRIVE_SAVE_DIR, exist_ok=True)
@@ -145,12 +145,12 @@ pred_labels = np.argmax(pred_probs, axis=1)
 val_labels = validation_generator.classes
 
 print("\n" + "="*30)
-print("--- Final Champion Model Report ---")
+print("--- Final Model Report ---")
 print("="*30)
 print(classification_report(val_labels, pred_labels, target_names=class_names, digits=4))
 
 print("\n" + "="*30)
-print("--- Final Champion Confusion Matrix ---")
+print("--- Final Confusion Matrix ---")
 print("="*30)
 cm = confusion_matrix(val_labels, pred_labels)
 plt.figure(figsize=(10, 8))
@@ -159,6 +159,7 @@ sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
             yticklabels=class_names)
 plt.xlabel("Predicted Label")
 plt.ylabel("True Label")
-plt.title("Final Champion Model Confusion Matrix")
+plt.title("Confusion Matrix")
 plt.savefig(MATRIX_SAVE_PATH)
+
 plt.show()
