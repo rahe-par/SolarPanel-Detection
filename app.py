@@ -16,7 +16,7 @@ IMG_HEIGHT = 224
 IMG_WIDTH = 224
 IMG_SIZE = (IMG_HEIGHT, IMG_WIDTH)
 
-MODEL_PATH ="Model\SolarPanel_Project_Final\solarguard_champion_model.h5"
+MODEL_PATH ="Model\SolarPanel_Project_Final\solarguard_model.h5"
 
 CLASS_NAMES = [
     'Bird-drop', 
@@ -112,4 +112,5 @@ if uploaded_file is not None:
             use_container_width=True
         )
 else:
+
     st.info("Please upload an image file to get started.")
