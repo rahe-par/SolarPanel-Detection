@@ -2,7 +2,7 @@
 
 This project uses deep learning to classify solar panel images into six categories.
 
-Model used is **`MobileNetV2`** classifier trained using feature extraction.
+Model used is **MobileNetV2** classifier trained using feature extraction.
 
 ###  Model Performance 
 It achieves a **77.0% reproducible accuracy** 
@@ -10,7 +10,7 @@ It achieves a **77.0% reproducible accuracy**
   * **Physical-Damage Recall:** **85%**
   * **Electrical-damage Recall:** **80%**
 
-### 🗂️ Classification Classes
+###  Classification Classes
 
 The model classifies panels into one of six categories:
 
@@ -23,3 +23,4 @@ The model classifies panels into one of six categories:
 
 
 This project is for educational purposes as part of the GUVI Artificial Intelligence and Machine Learning program.
+
